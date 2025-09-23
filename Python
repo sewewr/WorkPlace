@@ -1,1 +1,62 @@
+import math
+def plus(a,b):
+    return print(a+b)
+def minus(a,b):
+    return print(a-b)
+def share(a,b): 
+    return print(a//b)
+def umnojit(a,b):  
+    return print(a*b)
+def degree(a,b):  
+    return print(a**b)
+def okrugB(a):
+    return print(math.ceil(a))
+def okrugM(a):
+    return print(int(a))
 
+print("Введите необходимую ф-ю: сложение, вычитаение, умножение, деление и т.д")
+
+c = str(input(''))
+
+if c == 'сложение' or c == 'вычитание' or c =='умножение' or c =='деление' or c =='возвести в степеннь' : 
+    print("Введите первое число")
+    a = input()
+    if a.isdigit():
+        a=int(a)
+    else:
+        print("Вы ввели не число. Введите первое число:")
+        a=int(input())
+        
+    print("Введите второе число")
+    b = input()
+    if b.isdigit():
+        b=int(b)
+    else:
+        print("Вы ввели не число. Введите первое число:")
+        b=int(input())
+        
+elif c == 'округлить в большую' or c =='округлить в меньшую':
+    print("Введите число")
+    a=input()
+    if a.isdigit():
+        a=float(a)
+    else:
+        print("Вы ввели не число. Введите число:")
+        a=float(input())
+        
+if c == 'сложение':
+    plus(a,b)
+elif c == 'вычитание':
+    minus(a,b)
+elif c == 'деление':
+    if b == 0:
+        print('ошибка: деление на ноль')
+    share(a,b)
+elif c =='умножение':
+    umnojit(a,b)
+elif c =='возвести в степень':
+    degree(a,b)
+elif c =='округлить в большую':
+    okrugB(a)
+elif c =='округлить в меньшую':
+    okrugM(a)

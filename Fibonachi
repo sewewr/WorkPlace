@@ -1,0 +1,25 @@
+def perfect_square(x):
+
+    s = int(x**0.5)
+    return s * s == x
+
+def fib(n):
+
+    if n < 0:
+        return False
+    if n == 0 or n == 1:
+        return True
+    
+    x1 = 5 * n * n + 4
+    x2 = 5 * n * n - 4
+    
+    return perfect_square(x1) or perfect_square(x2)
+
+
+
+num = int(input("Введите число для проверки: "))
+        
+if fib(num):
+     print('Число',num,'является числом Фибоначчи')
+else:
+    print('Число',num,'не является числом Фибоначчи')

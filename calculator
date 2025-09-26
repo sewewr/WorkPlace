@@ -21,26 +21,29 @@ c = str(input(''))
 if c == 'сложение' or c == 'вычитание' or c =='умножение' or c =='деление' or c =='возвести в степеннь' : 
     print("Введите первое число")
     a = input()
-    if a.isdigit():
+    try:
+        a.isdigit()
         a=int(a)
-    else:
+    except:
         print("Вы ввели не число. Введите первое число:")
         a=int(input())
         
     print("Введите второе число")
     b = input()
-    if b.isdigit():
+    try:
+        b.isdigit()
         b=int(b)
-    else:
+    except:
         print("Вы ввели не число. Введите первое число:")
         b=int(input())
         
 elif c == 'округлить в большую' or c =='округлить в меньшую':
     print("Введите число")
     a=input()
-    if a.isdigit():
+    try:
+        a.isdigit()
         a=float(a)
-    else:
+    except:
         print("Вы ввели не число. Введите число:")
         a=float(input())
         

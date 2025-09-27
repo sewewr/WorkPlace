@@ -4,11 +4,11 @@ def plus(a,b):
 def minus(a,b):
     return print(a-b)
 def share(a,b): 
-    return print(a//b)
+    return print(round((a//b),2))
 def umnojit(a,b):  
-    return print(a*b)
+    return print(round((a*b),2))
 def degree(a,b):  
-    return print(a**b)
+    return print(round((a**b),2))
 def okrugB(a):
     return print(math.ceil(a))
 def okrugM(a):
@@ -22,20 +22,18 @@ if c == 'сложение' or c == 'вычитание' or c =='умножени
     print("Введите первое число")
     a = input()
     try:
-        a.isdigit()
-        a=int(a)
+        a=float(a)
     except:
         print("Вы ввели не число. Введите первое число:")
-        a=int(input())
+        a=float(input())
         
     print("Введите второе число")
     b = input()
     try:
-        b.isdigit()
-        b=int(b)
+        b=float(b)
     except:
         print("Вы ввели не число. Введите первое число:")
-        b=int(input())
+        b=float(input())
         
 elif c == 'округлить в большую' or c =='округлить в меньшую':
     print("Введите число")

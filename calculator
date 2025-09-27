@@ -39,7 +39,6 @@ elif c == 'округлить в большую' or c =='округлить в �
     print("Введите число")
     a=input()
     try:
-        a.isdigit()
         a=float(a)
     except:
         print("Вы ввели не число. Введите число:")
